@@ -29,6 +29,11 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <!-- Main css -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Mapbox Scripts -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.css' rel='stylesheet' />
+
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="30">
@@ -127,7 +132,7 @@
        <!-- // end .section -->
 
 
-       <div class="section light-bg">
+       <div class="section">
           <div class="container">
             <div class="section-title">
               <h3>How it Works</h3>
@@ -228,7 +233,26 @@
 
        </div>
        <!-- // end .section -->
-
+       <div class="section light-bg">
+         <div class="container">
+           <div class="section-title">
+              <small>Ready-Made Map Examples</small>
+              <h3>Red Trail Map</h3>
+              <p>A USA-wide map of trails is built with OpenStreetMap data. <br> All trails are colored red.</p>
+           </div>
+           <div id="red-trail-map"></div>
+           <div class="section-title">
+              <h3>Multi-user Trail Map</h3>
+              <p>Another USA-wide map of trails is built with OpenStreetMap data. <br> Trails are colored according to the activities permitted on them.</p>
+           </div>
+           <div id='multi-user-trail-map'></div>
+           <div class="section-title">
+              <h3>Ski Map</h3>
+              <p>This map style is useful for Alpine and Nordic Ski Maps. <br> Below is a map of the Crested Butte Ski Resort.</p>
+           </div>
+          <div id="alpine-ski-map"></div>
+         </div>
+       </div>
 
 
 
@@ -353,9 +377,11 @@
                    </div>
                    <div class="col-lg-6">
                        <div class="social-icons">
+                           <!--
                            <a href="#"><span class="ti-facebook"></span></a>
                            <a href="#"><span class="ti-twitter-alt"></span></a>
                            <a href="#"><span class="ti-instagram"></span></a>
+                         -->
                        </div>
                    </div>
                </div>
@@ -364,7 +390,7 @@
 
        </div>
     <!-- // end .section -->
-    <footer class="my-5 text-center">
+    <!--<footer class="my-5 text-center">-->
         <!-- Colorlib backlink removal receipt number 1130-8615-8064-5915-->
         <!--<p class="mb-2"><small>COPYRIGHT © 2017. ALL RIGHTS RESERVED. MOBAPP TEMPLATE BY <a href="https://colorlib.com">COLORLIB</a></small></p>-->
 <!--
@@ -382,6 +408,56 @@
     <script src="js/owl.carousel.min.js"></script>
     <!-- Custom JS -->
     <script src="js/script.js"></script>
+    <!-- Mapbox multi-user-trail-map-->
+    <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoianVpY3ltYXBzIiwiYSI6ImNqanB3dHY2aDJwMDgza21kdzNhMWRjNDAifQ.IrNLdyNCaWI7QTqVXOmzNQ';
+      var map = new mapboxgl.Map({
+          container: 'red-trail-map', // container id
+          style: 'mapbox://styles/juicymaps/cjjpw0svy00jk2snpq5u1r3bm', //hosted style id
+      });
+      // Add geolocate control to the map.
+      map.addControl(new mapboxgl.GeolocateControl({
+          positionOptions: {
+              enableHighAccuracy: true
+          },
+          trackUserLocation: true
+      }));
+    </script>
+    <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoianVpY3ltYXBzIiwiYSI6ImNqanB3dGdyMjIxZXYza21wMzZic3B1aDYifQ.jsNpzTrG9ThoJZ3t02bhtg';
+      var map = new mapboxgl.Map({
+          container: 'multi-user-trail-map', // container id
+          style: 'mapbox://styles/juicymaps/cjjpvz4jd00jb2skf8sqd0uld', //hosted style id
+      });
+      // Add geolocate control to the map.
+      map.addControl(new mapboxgl.GeolocateControl({
+          positionOptions: {
+              enableHighAccuracy: true
+          },
+          trackUserLocation: true
+      }));
+    </script>
+    <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoianVpY3ltYXBzIiwiYSI6ImNqanB2d2IzdjNqYWozd214bzI2aXR6bGkifQ.HTugg4uBh9EjsNqELarx9w';
+      var map = new mapboxgl.Map({
+          container: 'alpine-ski-map', // container id
+          style: 'mapbox://styles/juicymaps/cjjpvxa4k00h62spsotecevep', //hosted style id
+      });
+      // Add geolocate control to the map.
+      map.addControl(new mapboxgl.GeolocateControl({
+          positionOptions: {
+              enableHighAccuracy: true
+          },
+          trackUserLocation: true
+      }));
+    </script>
+
+
+    <!-- Mapbox red-trail-map-->
+
+    <!-- Mapbox alpine-ski-map-->
+
+
 
 </body>
 

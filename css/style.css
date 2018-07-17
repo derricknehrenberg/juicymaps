@@ -7,14 +7,14 @@ Version : 1.0
 Author  : Surjith S M
 URI     : https://surjithctly.in/
 
-Copyright © All rights Reserved 
+Copyright © All rights Reserved
 
 */
 
 
 /*------------------------
 [TABLE OF CONTENTS]
-    
+
 1. GLOBAL STYLES
 2. NAVBAR
 3. HERO
@@ -639,4 +639,25 @@ header {
         text-align: center;
         margin-top: 2rem;
     }
+}
+
+#multi-user-trail-map {
+  height: 400px;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 75px;
+}
+
+#red-trail-map {
+  height: 400px;
+  width:70%;
+  margin: auto;
+  margin-bottom: 75px;
+}
+
+#alpine-ski-map {
+  height: 400px;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 75px;
 }
