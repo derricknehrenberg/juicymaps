@@ -642,22 +642,22 @@ header {
 }
 
 #multi-user-trail-map {
-  height: 400px;
-  width: 70%;
+  height: 500px;
+  width: 100%;
   margin: auto;
   margin-bottom: 75px;
 }
 
 #red-trail-map {
-  height: 400px;
-  width:70%;
+  height: 500px;
+  width:100%;
   margin: auto;
   margin-bottom: 75px;
 }
 
 #alpine-ski-map {
-  height: 400px;
-  width: 70%;
+  height: 500px;
+  width: 100%;
   margin: auto;
   margin-bottom: 75px;
 }
