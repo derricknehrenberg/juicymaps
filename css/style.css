@@ -661,3 +661,9 @@ header {
   margin: auto;
   margin-bottom: 75px;
 }
+
+.nav-brand-font {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 32px;
+}
